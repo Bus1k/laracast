@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db1b4075-0d8b-41d8-a43a-978e8fa2ee82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/_friends-list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/_publish-tweet-panel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/_sidebar-links.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/_tweet.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laracast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laracast.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Tweet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/TweetFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_19_180313_create_tweets_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_publish-tweet-panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_publish-tweet-panel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_tweet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +209,8 @@
       <updated>1603041209074</updated>
       <workItem from="1603041210155" duration="1221000" />
       <workItem from="1603042491893" duration="2556000" />
-      <workItem from="1603045164992" duration="4404000" />
+      <workItem from="1603045164992" duration="5081000" />
+      <workItem from="1603130362200" duration="5571000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1603041756964</created>
@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603043426258</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="template create">
+      <created>1603049643387</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603049643387</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,20 +242,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="add auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="add auth" />
+    <MESSAGE value="template create" />
+    <option name="LAST_COMMIT_MESSAGE" value="template create" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603042393390">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040/-1920.0.1920.1040/2560.-406.1080.1880@0.0.2560.1040" timestamp="1603042393390" />
-    <state x="903" y="102" key="CommitChangelistDialog2" timestamp="1603043425025">
+    <state x="903" y="102" key="CommitChangelistDialog2" timestamp="1603049642604">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="903" y="102" key="CommitChangelistDialog2/0.0.2560.1040/-1920.0.1920.1040/2560.-406.1080.1880@0.0.2560.1040" timestamp="1603043425025" />
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603043437762">
+    <state x="903" y="102" key="CommitChangelistDialog2/0.0.2560.1040/-1920.0.1920.1040/2560.-406.1080.1880@0.0.2560.1040" timestamp="1603049642604" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603049647969">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2/0.0.2560.1040/-1920.0.1920.1040/2560.-406.1080.1880@0.0.2560.1040" timestamp="1603043437762" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/0.0.2560.1040/-1920.0.1920.1040/2560.-406.1080.1880@0.0.2560.1040" timestamp="1603049647969" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603133204528">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-1920.0.1920.1040/2560.-406.1080.1880@0.0.2560.1040" timestamp="1603133204528" />
   </component>
 </project>
