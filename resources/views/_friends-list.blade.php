@@ -1,12 +1,14 @@
-<h3 class="font-bold text-xl mb-3">Friends</h3>
-<ul>
-    @foreach(range(1,8) as $index)
-    <li class="mb-4">
-        <div class="flex items-center text-sm">
-            <img src="https://picsum.photos/40" alt="" class="rounded-full mr-2">
+<div class="lg:w-1/6 bg-blue-100 rounded-lg p-4">
+    <h3 class="font-bold text-xl mb-3">Following</h3>
+    <ul>
+        @foreach(auth()->user()->follows as $user)
+        <li class="mb-4">
+            <div class="flex items-center text-sm">
+                <img src="{{ $user->avatar }}" alt="" class="rounded-full mr-2">
 
-            Grzegorz Bus
-        </div>
-    </li>
-    @endforeach
-</ul>
+                {{ $user->name }}
+            </div>
+        </li>
+        @endforeach
+    </ul>
+</div>
